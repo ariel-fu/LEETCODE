@@ -6,6 +6,7 @@ public int[] smallerNumbersThanCurrent(int[] nums) {
   		 max = nums[i];
   	 }
    }
+
    int[] hash = new int[max+1];
    for(int i = 0; inums.length; i++) {
   	 int curr = nums[i];
@@ -19,11 +20,10 @@ public int[] smallerNumbersThanCurrent(int[] nums) {
   		 totalLessThan = nums.length-1;
   	 } else {
   		 for(int j = 0; jcurrNum; j++) {
-    		 totalLessThan += hash[j];
-    	 }
- 
+    			 totalLessThan += hash[j];
+	    	 } 
   	 }
-  	   	 ans[i] = totalLessThan;
+  	 ans[i] = totalLessThan;
    }
    return ans;
 }
